@@ -26,7 +26,6 @@ jobs:
           replace-with: '-'
           flags: 'g'
         
-        
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
         with:
