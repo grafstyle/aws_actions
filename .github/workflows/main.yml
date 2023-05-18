@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout Latest Repo
-        uses: actions/checkout@main
+      - name: Checkout source code
+        uses: actions/checkout@v2
       
       - name: Generate Deployment Package
         run: zip -r deploy.zip . -x '*.git*'
@@ -25,6 +25,7 @@ jobs:
           string: "${{ steps.current-time.outputs.time }}"
           replace-with: '-'
           flags: 'g'
+        
         
         
       - name: Deploy to EB
