@@ -34,5 +34,5 @@ jobs:
           application_name: actuality
           environment_name: Actuality-env-1
           version_label: "actuality-${{ steps.format-time.outputs.replaced }}" 
-          region: us-east-1
+          region: us-east-2
           deployment_package: deploy.zip
